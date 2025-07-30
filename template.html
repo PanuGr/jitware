@@ -1,0 +1,182 @@
+<!--TO ADD/USE:
+- images from unsplash.com
+- every image (except hero image) should have: loading='lazy', decoding='async', aria-hiden='true'
+- every icon should have attributes: aria-hiden='true'
+- DaisyUI components and tailwindcss
+- scroll-driven animations with animamate.css classes. Read about scroll-driven animations at: https://developer.chrome.com/docs/css-ui/scroll-driven-animations#animation_timelines
+- hover effects (custom or animate.css classes)
+- skip link
+- favicon icon
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="sitemap" href="/sitemap.xml" />
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <!--Basic SEO-->
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- Atkinson Hyperlegible Font -->
+    <link href="https://fonts.bunny.net/css?family=atkinson-hyperlegible:400,400i,700,700i" rel="stylesheet">
+    <!-- DaisyUI + Tailwind CSS -->
+
+    <!-- Ionicons -->
+    <script defer type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <!--AnimateCSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        /* RESET CSS */
+        :root {
+            interpolate-size: allow-keywords;
+            --font: 'atkinson-hyperlegible', system-ui;
+            --primary-color: ;
+            --secondary-color: ;
+            --accent: ;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            max-width: 1920px;
+            margin: auto;
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+
+        body {
+            min-height: 100dvh;
+            font-family: var(--font);
+            text-rendering: optimizeSpeed;
+        }
+
+
+        img,
+        svg,
+        video,
+        picture {
+            max-width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        input,
+        button,
+        textarea,
+        select {
+            font: inherit;
+            field-sizing: content;
+        }
+
+        footer {
+            content-visibility: auto;
+            margin-top: auto; /* Push footer to bottom */
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            * {
+                animation: none;
+                transition: none;
+            }
+        }
+    </style>
+
+</head>
+<!--Components contain already some styling. Feel free to modify them according to the project's requirements-->
+
+<body>
+    <nav class="navbar bg-base-100 shadow-sm" id="navbar">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <button tabindex="0" type="button" id="menu-toggle" aria-label="Toggle navigation menu"
+                    class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </button>
+                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                    <li><a>Item 1</a></li>
+                    <li><!-- The submenu will be visible. Use detail tag if submenu should be hidden -->
+                        <a>Parent</a>
+                        <ul class="p-2">
+                            <li><a>Submenu 1</a></li>
+                            <li><a>Submenu 2</a></li>
+                        </ul>
+                    </li>a
+                    <li><a>Item 3</a></li>
+                </ul>
+            </div>
+            <h1><a class="btn btn-ghost text-xl">daisyUI</a></h1>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a>Item 1</a></li>
+                <li>
+                    <details>
+                        <summary>Parent</summary>
+                        <ul class="p-2">
+                            <li><a>Submenu 1</a></li>
+                            <li><a>Submenu 2</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a>Item 3</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a class="btn">CTA button</a>
+        </div>
+    </nav>
+    <header class="hero min-h-screen"
+        style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-neutral-content text-center">
+            <div class="max-w-md">
+                <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                <p class="mb-5">
+                    Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                    quasi. In deleniti eaque aut repudiandae et a id nisi.
+                </p>
+                <button type="button" class="btn btn-primary">CTA button</button>
+            </div>
+        </div>
+    </header>
+    <main></main>
+    <footer></footer>
+    <script>
+        //TEST THAT:
+        // Menu toggles on small screens
+        // Menu closes when clicking a link on small screens
+        // Menu closes when clicking outside the menu
+        // Scroll-based show/hide navigation menu
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.style.transform = 'translateY(-100%)'; // Hide on scroll down
+            } else {
+                navbar.style.transform = 'translateY(0)'; // Show on scroll up
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+</body>
+
+</html>
