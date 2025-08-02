@@ -337,62 +337,45 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section class="py-20 bg-primary text-primary-content">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12 reveal">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Wat onze klanten zeggen</h2>
+        <section class="mt-20 max-w-4xl mx-auto animate-fade-in" style="animation-delay: 0.3s;">
+            <div class="testimonial-card bg-white p-8 rounded-xl border border-gray-100 relative">
+                <div
+                    class="absolute -top-4 -left-4 w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
+                    <ion-icon name="quote" class="text-indigo-400 text-2xl"></ion-icon>
                 </div>
-                <div class="carousel w-full max-w-4xl mx-auto bg-base-100/10 rounded-box p-8">
-                    <!-- Slide 1 -->
-                    <div id="slide1" class="carousel-item relative w-full flex-col items-center text-center">
-                        <div class="avatar mb-4">
-                            <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                <img src="bestanden/klanten/reviews/ann.png" alt="Ann L. - Otentik Wellness"
-                                    loading="lazy" />
-                            </div>
+                <div class="flex flex-col md:flex-row items-start gap-6">
+                    <img class="photo w-12 h-12 rounded-full object-cover" src="https://picsum.photos/200"
+                        alt="Ann L. - Otentik Wellness"
+                        class="w-16 h-16 rounded-full object-cover ring-4 ring-indigo-50 shadow-sm">
+                    <div class="flex-1">
+                        <div class="flex mb-3">
+                            <ion-icon name="star" class="text-yellow-400 mr-1"></ion-icon>
+                            <ion-icon name="star" class="text-yellow-400 mr-1"></ion-icon>
+                            <ion-icon name="star" class="text-yellow-400 mr-1"></ion-icon>
+                            <ion-icon name="star" class="text-yellow-400 mr-1"></ion-icon>
+                            <ion-icon name="star" class="text-yellow-400"></ion-icon>
                         </div>
-                        <blockquote class="text-lg italic max-w-2xl mx-auto">"Jens is een zeer geduldige en hulpvaardige
-                            kerel om mee samen te werken. Niets is teveel voor hem.
-                            Altijd bereikbaar en werkt snel! Topkerel! Bedankt Jens!"</blockquote>
-                        <p class="mt-4 font-bold">Ann L. <span class="font-normal opacity-80">- Otentik Wellness</span>
+                        <p class="text-gray-600 mb-4 italic leading-relaxed">
+                            "Jens is een zeer geduldige en hulpvaardige kerel om mee samen te werken. Niets is teveel
+                            voor hem.
+                            Altijd bereikbaar en werkt snel! Topkerel! Bedankt Jens!"
+                            <span class="block mt-2 text-indigo-400">💙 Fan van Jens 💙</span>
                         </p>
-                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                            <a href="#slide3" class="btn btn-circle btn-ghost">❮</a>
-                            <a href="#slide2" class="btn btn-circle btn-ghost">❯</a>
-                        </div>
-                    </div>
-                    <!-- Slide 2 -->
-                    <div id="slide2" class="carousel-item relative w-full flex-col items-center text-center">
-                        <div class="avatar mb-4">
-                            <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                <img src="bestanden/klanten/reviews/sam.jpg" alt="Sam V. - Conell BV"
-                                    loading="lazy" />
-                            </div>
-                        </div>
-                        <blockquote class="text-lg italic max-w-2xl mx-auto">"Uitzonderlijke service en aandacht voor detail. Jens heeft ons bedrijf geholpen met het aanleveren van een nieuwe website en is op zoek gegaan naar potentieel nieuwe klanten voor ons bedrijf en leverde alles op tijd en binnen budget."</blockquote>
-                        <p class="mt-4 font-bold">Sam V. <span class="font-normal opacity-80">- Conell BV</span></p>
-                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                            <a href="#slide1" class="btn btn-circle btn-ghost">❮</a>
-                            <a href="#slide3" class="btn btn-circle btn-ghost">❯</a>
-                        </div>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div id="slide3" class="carousel-item relative w-full flex-col items-center text-center">
-                        <div class="avatar mb-4">
-                            <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                <img src="bestanden/klanten/reviews/femke.jpg" alt="Femke VDD - Dakwerken Van den Driessche"
-                                    loading="lazy" />
-                            </div>
-                        </div>
-                        <blockquote class="text-lg italic max-w-2xl mx-auto">"Professionele aanpak en altijd bereid om zich extra in te zetten. Onze website is nu beter dan ooit dankzij Jens zijn expertise."</blockquote>
-                        <p class="mt-4 font-bold">Femke VDD <span class="font-normal opacity-80">- Dakwerken Van den
-                                Driessche</span></p>
-                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                            <a href="#slide2" class="btn btn-circle btn-ghost">❮</a>
-                            <a href="#slide1" class="btn btn-circle btn-ghost">❯</a>
+                        <div class="flex items-center">
+                            <div class="h-px bg-gray-200 flex-1 mr-4"></div>
+                            <p class="font-bold text-gray-700">Ann L.</p>
+                            <span class="mx-2 text-gray-400">|</span>
+                            <p class="text-gray-500">Otentik Wellness</p>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Testimonial Navigation Dots -->
+            <div class="flex justify-center mt-8 space-x-2">
+                <button class="w-3 h-3 rounded-full bg-indigo-300"></button>
+                <button class="w-3 h-3 rounded-full bg-indigo-100"></button>
+                <button class="w-3 h-3 rounded-full bg-indigo-100"></button>
             </div>
         </section>
 
@@ -642,6 +625,97 @@
 
             // --- Dynamic Content Loading ---
 
+            // Simple testimonial slider functionality
+            document.addEventListener('DOMContentLoaded', function () {
+                const testimonials = [
+                    {
+                        quote: "Jens is een zeer geduldige en hulpvaardige kerel om mee samen te werken. Niets is teveel voor hem. Altijd bereikbaar en werkt snel! Topkerel! Bedankt Jens!",
+                        author: "Ann L.",
+                        company: "Otentik Wellness",
+                        rating: 5,
+                        emoji: "💙 Fan van Jens 💙",
+                        image: "https://picsum.photos/200"
+
+                    },
+                    {
+                        quote: "Uitzonderlijke service en aandacht voor detail. Jens heeft ons bedrijf geholpen met het aanleveren van een nieuwe website en is op zoek gegaan naar potentieel nieuwe klanten voor ons bedrijf en leverde alles op tijd en binnen budget.",
+                        author: "Sam V",
+                        company: "Conell BV",
+                        rating: 5,
+                        emoji: "🚀 Aanrader!",
+                        image: "https://picsum.photos/200"
+                    },
+                    {
+                        quote: "Professionele aanpak en altijd bereid om zich extra in te zetten. Onze website is nu beter dan ooit dankzij Jens zijn expertise.",
+                        author: "Femke VDD",
+                        company: "Dakwerken Van den Driessche",
+                        rating: 5,
+                        emoji: "✨ Geweldig werk!",
+                        image: "https://picsum.photos/200"
+                    }
+                ];
+
+                let currentTestimonial = 0;
+                const dots = document.querySelectorAll('.flex.justify-center.mt-8 button');
+
+                function updateTestimonial(index) {
+                    const testimonial = testimonials[index];
+                    const card = document.querySelector('.testimonial-card');
+
+                    // Fade out
+                    card.style.opacity = 0;
+
+                    setTimeout(() => {
+                        // Update content
+                        const stars = card.querySelectorAll('.fa-star');
+                        stars.forEach((star, i) => {
+                            if (i < testimonial.rating) {
+                                star.classList.add('text-yellow-400');
+                            } else {
+                                star.classList.remove('text-yellow-400');
+                                star.classList.add('text-gray-300');
+                            }
+                        });
+
+                        card.querySelector('p.text-gray-600').innerHTML =
+                            `"${testimonial.quote}" <span class="block mt-2 text-indigo-400">${testimonial.emoji}</span>`;
+
+                        card.querySelector('p.font-bold').textContent = testimonial.author;
+                        card.querySelector('p.text-gray-500').textContent = testimonial.company;
+
+                        card.querySelector('img.photo').src = testimonial.image;
+
+                        // Update active dot
+                        dots.forEach((dot, i) => {
+                            if (i === index) {
+                                dot.classList.remove('bg-indigo-100');
+                                dot.classList.add('bg-indigo-300');
+                            } else {
+                                dot.classList.remove('bg-indigo-300');
+                                dot.classList.add('bg-indigo-100');
+                            }
+                        });
+
+                        // Fade in
+                        card.style.opacity = 1;
+                    }, 300);
+                }
+
+                // Add click events to dots
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        currentTestimonial = index;
+                        updateTestimonial(currentTestimonial);
+                    });
+                });
+
+                // Auto-rotate testimonials
+                setInterval(() => {
+                    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+                    updateTestimonial(currentTestimonial);
+                }, 5000);
+            });
+
             // Function to create a generic content card
             const createCard = (item) => {
                 const card = document.createElement('div');
@@ -682,7 +756,7 @@
                     latestBlogs.forEach(blog => container.appendChild(createCard(blog)));
                 })
                 .catch(error => console.error('Error loading blog posts:', error));
-
+/* 
             // Fetch Latest Prompt
             fetch('ai/prompts/prompts.json')
                 .then(response => response.ok ? response.json() : Promise.reject('Prompts not found'))
@@ -716,7 +790,7 @@
                     .catch(error => console.error(`Error loading ${source.json}:`, error));
             });
 
-        });
+       */  });
     </script>
 </body>
 
