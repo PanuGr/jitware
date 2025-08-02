@@ -17,6 +17,7 @@ Statistic numbers (e.g., "+75% More Visitors") come to life as they appear on th
 
 ### Sections
 All sections have been redesigned to be more visually appealing, using cards, icons, and a consistent style.
+They follow your javascript logic so they remain functionable even with a different design
 
 ### Accessibility & Performance
 I've taken into account best practices, such as lazy loading images for better performance and adding a "Skip to main content" link for improved accessibility.
