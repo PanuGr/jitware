@@ -339,7 +339,7 @@
                 </div>
             </div>
         </section>
-
+        <!-- ========== BLOG SECTION ========== -->
         <section id="blog" class="py-20 bg-base-200">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16 reveal">
@@ -354,50 +354,78 @@
                 </div>
             </div>
         </section>
-
-        <section class="py-20 bg-base-100">
-            <div class="container mx-auto px-4">
-                <div class="hero-content flex-col lg:flex-row gap-12">
-                    <div class="lg:w-1/2 reveal">
-                        <h2 class="text-4xl md:text-5xl font-bold text-neutral-800 mb-6">Slimmer groeien met AI</h2>
-                        <p class="text-lg text-neutral-600 mb-8">Onze geavanceerde AI-oplossingen helpen je tijd te
+        <!-- ========== AI PROMPT LIBRARY SECTION ========== -->
+        <section id="ai-prompt" class="py-20 bg-base-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Side: Explanation -->
+                    <div class="fade-in-up">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Slimmer groeien met AI
+                        </h2>
+                        <p class="text-lg text-base-content/70 mb-8">Onze geavanceerde AI-oplossingen helpen je tijd te
                             besparen, processen te automatiseren en betere resultaten te behalen.</p>
                         <ul class="space-y-4">
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-chart-line text-2xl text-primary"
-                                    aria-hidden="true"></i><span>AI data analyses</span></li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-file-lines text-2xl text-primary"
-                                    aria-hidden="true"></i><span>AI-copy voor landingspagina's</span>
+                            <li class="flex items-start gap-4">
+                                <div
+                                    class="bg-primary/10 text-primary rounded-full p-2 flex-shrink-0 w-10 h-10 flex items-center justify-center">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg">AI Data Analyses</h3>
+                                    <p class="text-base-content/70">Ondersteuning die leert van jouw data
+                                    </p>
+                                </div>
                             </li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-gear text-2xl text-primary"
-                                    aria-hidden="true"></i><span>AI optimalisaties</span></li>
+                            <li class="flex items-start gap-4">
+                                <div
+                                    class="bg-secondary/10 text-secondary rounded-full p-2 flex-shrink-0 w-10 h-10 flex items-center justify-center">
+                                    <i class="fas fa-pen-fancy"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg">AI-copy voor landingspagina's
+                                    </h3>
+                                    <p class="text-base-content/70">Geoptimaliseerde teksten die converteren
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div
+                                    class="bg-accent/10 text-accent rounded-full p-2 flex-shrink-0 w-10 h-10 flex items-center justify-center">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg">AI optimalisaties
+                                    </h3>
+                                    <p class="text-base-content/70">Kijk waar de pijnpunten liggen en optimaliseer deze
+                                    </p>
+                                </div>
+                            </li>
                         </ul>
                     </div>
-                    <!-- Rechterkant: Laatste Prompt -->
-                    <div
-                        class="bg-white border border-blue-200 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
-                        <div
-                            class="p-4 bg-gradient-to-r from-blue-100 to-blue-200 border-b border-blue-300 flex justify-between items-center">
-                            <p id="prompt-titel" class="text-base font-medium text-blue-800">...</p>
-                            <button type="button" id="copyPrompt"
-                                class="text-blue-700 hover:text-white transition-colors bg-blue-200 px-3 py-2 rounded-lg border border-blue-300 hover:bg-blue-500 hover:border-blue-600">
-                                <i class="far fa-copy"></i> <span class="text-xs ml-1">COPY</span>
-                            </button>
+                    <!-- Right Side: Prompt Viewer -->
+                    <div class="fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="mockup-code bg-primary text-primary-content shadow-lg w-96 lg:w-full">
+                            <div class="flex justify-between items-center px-4 py-2">
+                                <p id="prompt-titel" class="text-sm font-semibold">Loading latest prompt...</p>
+                                <button id="copy-prompt-btn" class="btn btn-ghost btn-sm">
+                                    <i class="far fa-copy"></i> COPY
+                                </button>
+                            </div>
+                            <pre id="prompt-inhoud"
+                                class="p-4 text-primary-content/70 text-left text-sm max-h-60 overflow-auto cursor-pointer"><code>Waiting for content...</code></pre>
                         </div>
-                        <pre id="prompt-inhoud"
-                            class="p-4 text-blue-800 text-left text-sm max-h-80 overflow-auto font-mono bg-blue-50 hover:bg-blue-100 transition cursor-pointer"
-                            onclick="copyPrompt()">...</pre>
-                        <div class="p-4 text-center border-t border-blue-200">
-                            <a href="ai/prompts/prompt-library"
-                                class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-medium inline-flex items-center border border-blue-300 hover:bg-blue-500 hover:text-white hover:border-blue-600">
-                                Bekijk prompt library
+                        <div class="text-center mt-6">
+                            <a href="ai/prompts/prompt-library" class="btn btn-outline">
+                                Bekijk Prompt Library
                                 <i class="fas fa-arrow-right ml-2 text-sm"></i>
                             </a>
-                            <p class="text-blue-600 text-xs mt-2">500+ prompts beschikbaar</p>
+                            <p class="text-xs text-base-content/50 mt-2">500+ prompts beschikbaar</p>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
-
+        <!--Tools-->
         <section id="kennis" class="py-20 bg-base-200">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16 reveal">
@@ -536,17 +564,6 @@
         </nav>
     </footer>
     <script>
-        //document.getElementById('copyPromt').addEventListener("click", copyPrompt);
-        /*  function copyPrompt() {
-             const promptContent = document.getElementById('prompt-inhoud').textContent;
-             navigator.clipboard.writeText(promptContent).then(() => {
-                 const copyBtn = document.querySelector('[title="Copy to clipboard"]');
-                 copyBtn.innerHTML = '<i class="fas fa-check text-green-400"></i> <span class="text-xs ml-1">COPIED!</span>';
-                 setTimeout(() => {
-                     copyBtn.innerHTML = '<i class="far fa-copy"></i> <span class="text-xs ml-1">COPY</span>';
-                 }, 2000);
-             });
-         } */
         document.addEventListener('DOMContentLoaded', () => {
             // --- Scroll-based Navbar Show/Hide ---
             let lastScrollTop = 0;
@@ -723,21 +740,61 @@
                 .catch(error => console.error('Error loading blog posts:', error));
 
 
+
+            // --- AI Prompt Loader & Copier ---
+            function copyPrompt() {
+                const promptContent = document.querySelector('#prompt-inhoud code')?.textContent;
+                const copyBtn = document.getElementById('copy-prompt-btn');
+
+                if (!promptContent || !copyBtn) return;
+
+                navigator.clipboard.writeText(promptContent).then(() => {
+                    copyBtn.innerHTML = '<i class="fas fa-check text-success"></i> COPIED!';
+                    setTimeout(() => {
+                        copyBtn.innerHTML = '<i class="far fa-copy"></i> COPY';
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy text: ', err);
+                    copyBtn.innerHTML = '<i class="fas fa-times text-error"></i> FAILED!';
+                    setTimeout(() => {
+                        copyBtn.innerHTML = '<i class="far fa-copy"></i> COPY';
+                    }, 2000);
+                });
+            }
+
+            function loadLatestPrompt() {
+                const promptTitleEl = document.getElementById('prompt-titel');
+                const promptContentEl = document.getElementById('prompt-inhoud');
+                const copyBtn = document.getElementById('copy-prompt-btn');
+
+                if (!promptTitleEl || !promptContentEl || !copyBtn) return;
+
+                promptContentEl.addEventListener('click', copyPrompt);
+                copyBtn.addEventListener('click', copyPrompt);
+
+                fetch('ai/prompts/prompts.json')
+                    .then(res => {
+                        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                        return res.json();
+                    })
+                    .then(data => {
+                        if (!data || data.length === 0) throw new Error('No prompts found in JSON file.');
+
+                        const latestPrompt = data.sort((a, b) => new Date(b.datum) - new Date(a.datum))[0];
+                        promptTitleEl.textContent = latestPrompt.titel;
+                        promptContentEl.innerHTML = `<code>${latestPrompt.prompt}</code>`;
+                    })
+                    .catch(error => {
+                        console.error('Error loading prompt:', error);
+                        promptTitleEl.textContent = 'Error Loading Prompt';
+                        promptContentEl.innerHTML = `<code>Could not load the latest AI prompt. The file at 'ai/prompts/prompts.json' might be missing or contain errors.</code>`;
+                        promptTitleEl.classList.add('text-error');
+                    });
+            }
+
+            loadLatestPrompt();
+
             /* 
-                        // Fetch Latest Prompt
-                        fetch('ai/prompts/prompts.json')
-                            .then(response => response.ok ? response.json() : Promise.reject('Prompts not found'))
-                            .then(data => {
-                                const titleEl = document.getElementById('prompt-titel');
-                                const contentEl = document.getElementById('prompt-inhoud');
-                                if (!titleEl || !contentEl || !data || data.length === 0) return;
-            
-                                const latest = data.sort((a, b) => new Date(b.datum) - new Date(a.datum))[0];
-                                titleEl.textContent = latest.titel;
-                                contentEl.textContent = latest.prompt;
-                            })
-                            .catch(error => console.error('Error loading prompts:', error));
-            
                         // Fetch Tools, Finances, Knowledge
                         const contentSources = [
                             { id: 'tools-container', json: 'tools/tools.json', slice: 3 },
