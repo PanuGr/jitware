@@ -100,7 +100,7 @@
     </header>
 
     <main id="main-content">
-
+        <!-- ========== HERO ========== -->
         <section class="hero min-h-screen text-white">
             <div class="hero-content text-center">
                 <div class="max-w-3xl">
@@ -118,7 +118,7 @@
                 </div>
             </div>
         </section>
-
+        <!-- ========== TRUSTED BY / SOCIAL PROOF ========== -->
         <section class="py-16 bg-base-100">
             <div class="container mx-auto px-4 text-center">
                 <h3 class="text-lg font-semibold text-neutral-500 mb-6 reveal">Vertrouwd door toonaangevende bedrijven
@@ -141,7 +141,7 @@
                 </div>
             </div>
         </section>
-
+        <!-- ========== SERVICES SECTION ========== -->
         <section id="diensten" class="py-20 bg-base-200">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16 reveal">
@@ -243,7 +243,7 @@
                 </div>
             </div>
         </section>
-
+        <!-- ========== CASE STUDIES SECTION ========== -->
         <section id="cases" class="py-20 bg-base-100">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16 reveal">
@@ -273,6 +273,7 @@
                         class="card bg-base-200 shadow-lg image-full reveal hover:-translate-y-2 transition-transform duration-300">
                         <figure><img src="https://picsum.photos/200" alt="Case study" loading="lazy" /></figure>
                         <div class="card-body">
+                            <div class="badge badge-secondary">SEO + Website</div>
                             <h3 class="card-title">Dakwerken Van den Driessche</h3>
                             <p>Van pagina 10 naar positie 2 in Google. Een spectaculaire stijging in vindbaarheid.</p>
                             <div class="card-actions justify-end">
@@ -287,6 +288,7 @@
                         style="transition-delay: 0.2s;">
                         <figure><img src="https://picsum.photos/200" alt="Case study" loading="lazy" /></figure>
                         <div class="card-body">
+                            <div class="badge badge-primary">SEO + Redesign</div>
                             <h3 class="card-title">De Doncker</h3>
                             <p>Van een verouderde, trage website naar een moderne, geoptimaliseerde website.</p>
                             <div class="card-actions justify-end">
@@ -301,6 +303,7 @@
                         style="transition-delay: 0.4s;">
                         <figure><img src="https://picsum.photos/200" alt="Case study" loading="lazy" /></figure>
                         <div class="card-body">
+                            <div class="badge badge-accent">SEO + Booking</div>
                             <h3 class="card-title">Otentik Wellness</h3>
                             <p>+230% bezoekers in 3 maanden met een nieuw online reserveringssysteem.</p>
                             <div class="card-actions justify-end">
@@ -317,43 +320,23 @@
             </div>
         </section>
 
-        <section class="mt-20 max-w-4xl mx-auto animate-fade-in" style="animation-delay: 0.3s;">
-            <div class="testimonial-card bg-white p-8 rounded-xl border border-gray-100 relative">
-                <div
-                    class="absolute -top-4 -left-4 w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
-                    <i class="fa-solid fa-quote-right text-indigo-400 text-2xl"></i>
+        <!-- ========== TESTIMONIALS SECTION ========== -->
+        <section id="testimonials" class="py-20 bg-base-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Wat onze klanten zeggen</h2>
+                    <p class="text-xl text-base-content/70">We zijn er trots op dat we zoveel bedrijven hebben geholpen.
+                    </p>
                 </div>
-                <div class="flex flex-col md:flex-row items-start gap-6">
-                    <img class="w-16 h-16 rounded-full object-cover ring-4 ring-indigo-50 shadow-sm photo"
-                        src="https://picsum.photos/200" alt="Ann L. - Otentik Wellness">
-                    <div class="flex-1">
-                        <div class="flex mb-3">
-                            <i class="fa-solid fa-star text-yellow-400 mr-1"></i>
-                            <i class="fa-solid fa-star text-yellow-400 mr-1"></i>
-                            <i class="fa-solid fa-star text-yellow-400 mr-1"></i>
-                            <i class="fa-solid fa-star text-yellow-400 mr-1"></i>
-                            <i class="fa-solid fa-star text-yellow-400"></i>
-                        </div>
-                        <p class="text-gray-600 mb-4 italic leading-relaxed">
-                            "Jens is een zeer geduldige en hulpvaardige kerel om mee samen te werken. Niets is teveel
-                            voor hem.
-                            Altijd bereikbaar en werkt snel! Topkerel! Bedankt Jens!"
-                            <span class="block mt-2 text-indigo-400">💙 Fan van Jens 💙</span>
-                        </p>
-                        <div class="flex items-center">
-                            <div class="h-px bg-gray-200 flex-1 mr-4"></div>
-                            <p class="font-bold text-gray-700">Ann L.</p>
-                            <span class="mx-2 text-gray-400">|</span>
-                            <p class="text-gray-500">Otentik Wellness</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="flex justify-center mt-8 space-x-2">
-                <button type="button" aria-label="next slide" class="w-3 h-3 rounded-full bg-indigo-300"></button>
-                <button type="button" aria-label="next slide" class="w-3 h-3 rounded-full bg-indigo-100"></button>
-                <button type="button" aria-label="next slide" class="w-3 h-3 rounded-full bg-indigo-100"></button>
+                <div id="testimonial-carousel" class="carousel w-full">
+                    <!-- Testimonials will be injected here by JS -->
+                </div>
+
+                <!-- Navigation Dots -->
+                <div id="testimonial-dots" class="flex justify-center py-2 gap-2">
+                    <!-- Dots will be injected here by JS -->
+                </div>
             </div>
         </section>
 
@@ -389,17 +372,30 @@
                                     aria-hidden="true"></i><span>AI optimalisaties</span></li>
                         </ul>
                     </div>
-                    <div class="mockup-code lg:w-1/2 bg-primary text-primary-content reveal"
-                        style="transition-delay: 0.2s;">
-                        <pre data-prefix="$"><code id="prompt-titel">Laden...</code></pre>
-                        <pre id="prompt-inhoud" class="text-warning text-sm p-4 overflow-x-auto">Laden...</pre>
-                        <div class="p-4 text-center border-t border-primary-content/20">
-                            <a href="ai/prompts/prompt-library" class="btn btn-secondary btn-sm">Bekijk prompt
-                                library</a>
+                    <!-- Rechterkant: Laatste Prompt -->
+                    <div
+                        class="bg-white border border-blue-200 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+                        <div
+                            class="p-4 bg-gradient-to-r from-blue-100 to-blue-200 border-b border-blue-300 flex justify-between items-center">
+                            <p id="prompt-titel" class="text-base font-medium text-blue-800">...</p>
+                            <button type="button" id="copyPrompt"
+                                class="text-blue-700 hover:text-white transition-colors bg-blue-200 px-3 py-2 rounded-lg border border-blue-300 hover:bg-blue-500 hover:border-blue-600">
+                                <i class="far fa-copy"></i> <span class="text-xs ml-1">COPY</span>
+                            </button>
+                        </div>
+                        <pre id="prompt-inhoud"
+                            class="p-4 text-blue-800 text-left text-sm max-h-80 overflow-auto font-mono bg-blue-50 hover:bg-blue-100 transition cursor-pointer"
+                            onclick="copyPrompt()">...</pre>
+                        <div class="p-4 text-center border-t border-blue-200">
+                            <a href="ai/prompts/prompt-library"
+                                class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-medium inline-flex items-center border border-blue-300 hover:bg-blue-500 hover:text-white hover:border-blue-600">
+                                Bekijk prompt library
+                                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                            <p class="text-blue-600 text-xs mt-2">500+ prompts beschikbaar</p>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
 
         <section id="kennis" class="py-20 bg-base-200">
@@ -540,6 +536,17 @@
         </nav>
     </footer>
     <script>
+        //document.getElementById('copyPromt').addEventListener("click", copyPrompt);
+        /*  function copyPrompt() {
+             const promptContent = document.getElementById('prompt-inhoud').textContent;
+             navigator.clipboard.writeText(promptContent).then(() => {
+                 const copyBtn = document.querySelector('[title="Copy to clipboard"]');
+                 copyBtn.innerHTML = '<i class="fas fa-check text-green-400"></i> <span class="text-xs ml-1">COPIED!</span>';
+                 setTimeout(() => {
+                     copyBtn.innerHTML = '<i class="far fa-copy"></i> <span class="text-xs ml-1">COPY</span>';
+                 }, 2000);
+             });
+         } */
         document.addEventListener('DOMContentLoaded', () => {
             // --- Scroll-based Navbar Show/Hide ---
             let lastScrollTop = 0;
@@ -590,7 +597,7 @@
             document.querySelectorAll('[data-count]').forEach(counter => counterObserver.observe(counter));
 
             // --- Dynamic Content Loading & Testimonial Slider ---
-
+            // --- Testimonial Carousel ---
             const testimonials = [
                 {
                     quote: "Jens is een zeer geduldige en hulpvaardige kerel om mee samen te werken. Niets is teveel voor hem. Altijd bereikbaar en werkt snel! Topkerel! Bedankt Jens!",
@@ -618,67 +625,60 @@
                     image: "https://picsum.photos/200"
                 }
             ];
+            let currentTestimonialIndex = 0;
+            const carouselContainer = document.getElementById('testimonial-carousel');
+            const dotsContainer = document.getElementById('testimonial-dots');
 
-            let currentTestimonial = 0;
-            const dots = document.querySelectorAll('.flex.justify-center.mt-8 button');
+            function renderTestimonials() {
+                if (!carouselContainer || !dotsContainer) return;
 
-            function updateTestimonial(index) {
-                const testimonial = testimonials[index];
-                const card = document.querySelector('.testimonial-card');
+                carouselContainer.innerHTML = '';
+                dotsContainer.innerHTML = '';
 
-                // Fade out
-                card.style.opacity = 0;
+                testimonials.forEach((testimonial, index) => {
+                    // Create carousel item
+                    const item = document.createElement('div');
+                    item.id = `testimonial-${index}`;
+                    item.className = 'carousel-item w-full';
+                    item.innerHTML = `
+                    <div class="card bg-base-200 w-full">
+                        <div class="card-body items-center text-center">
+                            <div class="avatar">
+                                <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                    <img src="${testimonial.image}" alt="Photo of ${testimonial.author}" />
+                                </div>
+                            </div>
+                            <p class="text-lg italic my-4">"${testimonial.quote}"</p>
+                            <h3 class="font-bold text-lg">${testimonial.author}</h3>
+                            <p class="text-sm opacity-70">${testimonial.company}</p>
+                        </div>
+                    </div>
+                `;
+                    carouselContainer.appendChild(item);
 
-                setTimeout(() => {
-                    // Update content
-                    const stars = card.querySelectorAll('.fa-star');
-                    stars.forEach((star, i) => {
-                        if (i < testimonial.rating) {
-                            star.classList.add('text-yellow-400');
-                            star.classList.remove('text-gray-300');
-                        } else {
-                            star.classList.remove('text-yellow-400');
-                            star.classList.add('text-gray-300');
-                        }
-                    });
-
-                    card.querySelector('p.text-gray-600').innerHTML =
-                        `"${testimonial.quote}" <span class="block mt-2 text-indigo-400">${testimonial.emoji}</span>`;
-
-                    card.querySelector('p.font-bold').textContent = testimonial.author;
-                    card.querySelector('p.text-gray-500').textContent = testimonial.company;
-
-                    card.querySelector('img.photo').src = testimonial.image;
-
-                    // Update active dot
-                    dots.forEach((dot, i) => {
-                        if (i === index) {
-                            dot.classList.remove('bg-indigo-100');
-                            dot.classList.add('bg-indigo-300');
-                        } else {
-                            dot.classList.remove('bg-indigo-300');
-                            dot.classList.add('bg-indigo-100');
-                        }
-                    });
-
-                    // Fade in
-                    card.style.opacity = 1;
-                }, 300);
-            }
-
-            // Add click events to dots
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    currentTestimonial = index;
-                    updateTestimonial(currentTestimonial);
+                    // Create dot
+                    const dot = document.createElement('a');
+                    dot.href = `#testimonial-${index}`;
+                    dot.className = 'btn btn-xs';
+                    dot.innerText = index + 1;
+                    dotsContainer.appendChild(dot);
                 });
-            });
+            }
 
             // Auto-rotate testimonials
             setInterval(() => {
-                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-                updateTestimonial(currentTestimonial);
-            }, 5000);
+                currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+                const nextSlide = document.querySelector(`#testimonial-${currentTestimonialIndex}`);
+                if (nextSlide) {
+                    carouselContainer.scroll({
+                        left: nextSlide.offsetLeft,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 6000);
+
+            renderTestimonials();
+
 
 
             // Function to create a generic content card
@@ -721,40 +721,42 @@
                     latestBlogs.forEach(blog => container.appendChild(createCard(blog)));
                 })
                 .catch(error => console.error('Error loading blog posts:', error));
-/* 
-            // Fetch Latest Prompt
-            fetch('ai/prompts/prompts.json')
-                .then(response => response.ok ? response.json() : Promise.reject('Prompts not found'))
-                .then(data => {
-                    const titleEl = document.getElementById('prompt-titel');
-                    const contentEl = document.getElementById('prompt-inhoud');
-                    if (!titleEl || !contentEl || !data || data.length === 0) return;
 
-                    const latest = data.sort((a, b) => new Date(b.datum) - new Date(a.datum))[0];
-                    titleEl.textContent = latest.titel;
-                    contentEl.textContent = latest.prompt;
-                })
-                .catch(error => console.error('Error loading prompts:', error));
 
-            // Fetch Tools, Finances, Knowledge
-            const contentSources = [
-                { id: 'tools-container', json: 'tools/tools.json', slice: 3 },
-                { id: 'finances-container', json: 'financien/financien.json', slice: 3 },
-                { id: 'knowledge-container', json: 'bedrijfsvoeren/bedrijfsvoeren.json', slice: 3 }
-            ];
-
-            contentSources.forEach(source => {
-                fetch(source.json)
-                    .then(response => response.ok ? response.json() : Promise.reject(`${source.json} not found`))
-                    .then(data => {
-                        const container = document.getElementById(source.id);
-                        if (!container) return;
-                        const latestItems = data.sort((a, b) => new Date(b.datum) - new Date(a.datum)).slice(0, source.slice);
-                        latestItems.forEach(item => container.appendChild(createListItem(item)));
-                    })
-                    .catch(error => console.error(`Error loading ${source.json}:`, error));
-            });
-        */
+            /* 
+                        // Fetch Latest Prompt
+                        fetch('ai/prompts/prompts.json')
+                            .then(response => response.ok ? response.json() : Promise.reject('Prompts not found'))
+                            .then(data => {
+                                const titleEl = document.getElementById('prompt-titel');
+                                const contentEl = document.getElementById('prompt-inhoud');
+                                if (!titleEl || !contentEl || !data || data.length === 0) return;
+            
+                                const latest = data.sort((a, b) => new Date(b.datum) - new Date(a.datum))[0];
+                                titleEl.textContent = latest.titel;
+                                contentEl.textContent = latest.prompt;
+                            })
+                            .catch(error => console.error('Error loading prompts:', error));
+            
+                        // Fetch Tools, Finances, Knowledge
+                        const contentSources = [
+                            { id: 'tools-container', json: 'tools/tools.json', slice: 3 },
+                            { id: 'finances-container', json: 'financien/financien.json', slice: 3 },
+                            { id: 'knowledge-container', json: 'bedrijfsvoeren/bedrijfsvoeren.json', slice: 3 }
+                        ];
+            
+                        contentSources.forEach(source => {
+                            fetch(source.json)
+                                .then(response => response.ok ? response.json() : Promise.reject(`${source.json} not found`))
+                                .then(data => {
+                                    const container = document.getElementById(source.id);
+                                    if (!container) return;
+                                    const latestItems = data.sort((a, b) => new Date(b.datum) - new Date(a.datum)).slice(0, source.slice);
+                                    latestItems.forEach(item => container.appendChild(createListItem(item)));
+                                })
+                                .catch(error => console.error(`Error loading ${source.json}:`, error));
+                        });
+                    */
         });
     </script>
 </body>
